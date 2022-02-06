@@ -97,16 +97,15 @@
                                     <div class="my-auto">
 
                                         <div>
-                                            <h5 class="text-primary">Welcome Back !</h5>
-                                            <p class="text-muted">Sign in to continue to Skote.</p>
+                                            <h5 class="text-primary">Welcome  !</h5>
                                         </div>
 
                                         <div class="mt-4">
                                             <form action="index">
 
                                                 <div class="mb-3">
-                                                    <label for="username" class="form-label">Username</label>
-                                                    <input type="text" class="form-control" id="username"
+                                                    <label for="username" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" name="email" id="username"
                                                         placeholder="Enter username">
                                                 </div>
 
@@ -117,7 +116,7 @@
                                                     </div>
                                                     <label class="form-label">Password</label>
                                                     <div class="input-group auth-pass-inputgroup">
-                                                        <input type="password" class="form-control"
+                                                        <input type="password" name="password" class="form-control"
                                                             placeholder="Enter password" aria-label="Password"
                                                             aria-describedby="password-addon">
                                                         <button class="btn btn-light " type="button" id="password-addon"><i
@@ -151,7 +150,7 @@
                                                         <li class="list-inline-item">
                                                             <a href="javascript::void()"
                                                                 class="social-list-item bg-info text-white border-info">
-                                                                <i class="mdi mdi-twitter"></i>
+                                                                <i class="mdi mdi-apple"></i>
                                                             </a>
                                                         </li>
                                                         <li class="list-inline-item">
@@ -171,13 +170,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="mt-4 mt-md-5 text-center">
-                                        <p class="mb-0">© <script>
-                                                document.write(new Date().getFullYear())
-
-                                            </script> Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by
-                                            Themesbrand</p>
-                                    </div>
+                                  
                                 </div>
 
 

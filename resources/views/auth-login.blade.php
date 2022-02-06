@@ -19,8 +19,8 @@
                                 <div class="row">
                                     <div class="col-7">
                                         <div class="text-primary p-4">
-                                            <h5 class="text-primary">Welcome Back !</h5>
-                                            <p>Sign in to continue to Skote.</p>
+                                            <h5 class="text-primary">Welcome </h5>
+                                           
                                         </div>
                                     </div>
                                     <div class="col-5 align-self-end">
@@ -53,9 +53,9 @@
                                     <form class="form-horizontal" action="index">
 
                                         <div class="mb-3">
-                                            <label for="username" class="form-label">Username</label>
-                                            <input type="text" class="form-control" id="username"
-                                                placeholder="Enter username">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="Enter email">
                                         </div>
 
                                         <div class="mb-3">
@@ -93,7 +93,7 @@
                                                 <li class="list-inline-item">
                                                     <a href="javascript::void()"
                                                         class="social-list-item bg-info text-white border-info">
-                                                        <i class="mdi mdi-twitter"></i>
+                                                        <i class="mdi mdi-apple"></i>
                                                     </a>
                                                 </li>
                                                 <li class="list-inline-item">
@@ -119,11 +119,7 @@
                             <div>
                                 <p>Don't have an account ? <a href="auth-register" class="fw-medium text-primary">
                                         Signup now </a> </p>
-                                <p>© <script>
-                                        document.write(new Date().getFullYear())
-
-                                    </script> Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand
-                                </p>
+                                
                             </div>
                         </div>
 
