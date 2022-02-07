@@ -50,12 +50,19 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'user_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
-            'dob' => ['required', 'date', 'before:today'],
-            'avatar' => ['required', 'image' ,'mimes:jpg,jpeg,png','max:1024'],
+            'firstname' => ['required'],
+            'lastname' => ['required'],
+            'phonenumber' => ['required'],
+            'age' => ['nullable', 'date', 'before:today'],
+            'avatar' => ['nullable', 'image' ,'mimes:jpg,jpeg,png','max:1024'],
+            'gender' => ['nullable'],
+            'country' => ['nullable'],
+            'city' => ['nullable'],
         ]);
     }
 
@@ -67,19 +74,26 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        if (request()->has('avatar')) {            
+        // dd($data);
+        if (request()->has('avatar')) {
             $avatar = request()->file('avatar');
             $avatarName = time() . '.' . $avatar->getClientOriginalExtension();
             $avatarPath = public_path('/images/');
             $avatar->move($avatarPath, $avatarName);
         }
-        
+
         return User::create([
-            'name' => $data['name'],
+            'first_name' => $data['firstname'],
+            'last_name' => $data['lastname'],
+            'user_name' =>$data['user_name'],
             'email' => $data['email'],
+            'phone_number'=>$data['phonenumber'],
+            'gender'=>$data['gender'],
             'password' => Hash::make($data['password']),
-            'dob' => date('Y-m-d', strtotime($data['dob'])),
-            'avatar' => "/images/" . $avatarName,
+            'age' => date('Y-m-d', strtotime($data['age'])),
+            'avatar' =>  "/images/" . $avatarName,
+            // 'country'=>$data['country'],
+            // 'city'=>$data['city']
         ]);
     }
 }
