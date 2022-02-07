@@ -31,13 +31,13 @@
                                         <div class="col-lg-7">
                                             <div class="text-center">
 
-                                                <h4 class="mb-3"><i class="bx bxs-quote-alt-left text-primary h1 align-middle me-3"></i><span class="text-primary">5k</span>+ Satisfied clients</h4>
+                                                <!-- <h4 class="mb-3"><i class="bx bxs-quote-alt-left text-primary h1 align-middle me-3"></i><span class="text-primary">5k</span>+ Satisfied clients</h4> -->
 
                                                 <div dir="ltr">
                                                     <div class="owl-carousel owl-theme auth-review-carousel" id="auth-review-carousel">
-                                                        <div class="item">
-                                                            <div class="py-3">
-                                                                <p class="font-size-16 mb-4">" Fantastic theme with a
+                                                        <!-- <div class="item">
+                                                            <div class="py-3"> -->
+                                                                <!-- <p class="font-size-16 mb-4">" Fantastic theme with a
                                                                     ton of options. If you just want the HTML to
                                                                     integrate with your project, then this is the
                                                                     package. You can find the files in the 'dist'
@@ -47,13 +47,13 @@
                                                                 <div>
                                                                     <h4 class="font-size-16 text-primary">Abs1981</h4>
                                                                     <p class="font-size-14 mb-0">- Skote User</p>
-                                                                </div>
-                                                            </div>
+                                                                </div> -->
+                                                            <!-- </div>
 
-                                                        </div>
+                                                        </div> -->
 
                                                         <div class="item">
-                                                            <div class="py-3">
+                                                            <!-- <div class="py-3">
                                                                 <p class="font-size-16 mb-4">" If Every Vendor on Envato
                                                                     are as supportive as Themesbrand, Development with
                                                                     be a nice experience. You guys are Wonderful. Keep
@@ -63,7 +63,7 @@
                                                                     <h4 class="font-size-16 text-primary">nezerious</h4>
                                                                     <p class="font-size-14 mb-0">- Skote User</p>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
 
                                                         </div>
                                                     </div>
@@ -92,8 +92,7 @@
                                 <div class="my-auto">
 
                                     <div>
-                                        <h5 class="text-primary">Welcome Back !</h5>
-                                        <p class="text-muted">Sign in to continue to Skote.</p>
+                                        <h5 class="text-primary">Welcome !</h5>
                                     </div>
 
                                     <div class="mt-4">
@@ -150,7 +149,7 @@
                                                     </li>
                                                     <li class="list-inline-item">
                                                         <a href="#" class="social-list-item bg-info text-white border-info">
-                                                            <i class="mdi mdi-twitter"></i>
+                                                            <i class="mdi mdi-apple"></i>
                                                         </a>
                                                     </li>
                                                     <li class="list-inline-item">
@@ -167,12 +166,7 @@
                                     </div>
                                 </div>
 
-                                <div class="mt-4 mt-md-5 text-center">
-                                    <p class="mb-0">© <script>
-                                            document.write(new Date().getFullYear())
-                                        </script> Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by
-                                        Themesbrand</p>
-                                </div>
+                             
                             </div>
 
 

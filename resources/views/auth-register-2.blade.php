@@ -98,7 +98,7 @@
 
                                         <div>
                                             <h5 class="text-primary">Register account</h5>
-                                            <p class="text-muted">Get your free Skote account now.</p>
+                                            
                                         </div>
 
                                         <div class="mt-4">

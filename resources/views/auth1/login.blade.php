@@ -20,7 +20,7 @@
                                     <div class="col-7">
                                         <div class="text-primary p-4">
                                             <h5 class="text-primary">Welcome Back !</h5>
-                                            <p>Sign in to continue to Skote.</p>
+                                            
                                         </div>
                                     </div>
                                     <div class="col-5 align-self-end">
@@ -108,7 +108,7 @@
                                                 </li>
                                                 <li class="list-inline-item">
                                                     <a href="#" class="social-list-item bg-info text-white border-info">
-                                                        <i class="mdi mdi-twitter"></i>
+                                                        <i class="mdi mdi-apple"></i>
                                                     </a>
                                                 </li>
                                                 <li class="list-inline-item">
@@ -136,10 +136,7 @@
                             <div>
                                 <p>Don't have an account ? <a href="{{ url('register') }}" class="fw-medium text-primary">
                                         Signup now </a> </p>
-                                <p>© <script>
-                                        document.write(new Date().getFullYear())
-
-                                    </script> Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand
+                                <p>
                                 </p>
                             </div>
                         </div>
