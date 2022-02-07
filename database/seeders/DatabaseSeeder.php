@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Country\Country;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,7 +16,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UserSeeder::class,
+            CityTableSeeder::class,
+            CountryTableSeeder::class,
         ]);
-        // \App\Models\User::factory(10)->create();
     }
 }

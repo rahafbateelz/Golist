@@ -44,7 +44,7 @@
                                                                     package. You can find the files in the 'dist'
                                                                     folder...no need to install git and all the other
                                                                     stuff the documentation talks about. "</p>
-                                                                    
+
                                                                 <div>
                                                                     <h4 class="font-size-16 text-primary">Abs1981</h4>
                                                                     <p class="font-size-14 mb-0">- Skote User</p>
@@ -110,11 +110,11 @@
                                                         </span>
                                                     @enderror
                                                 </div>
-        
+
                                                 <div class="mb-3">
                                                     <label for="firstname" class="form-label">Firstname</label>
-                                                    <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                                    value="{{ old('firstname') }}" id="username" name="firstname" autofocus required
+                                                    <input type="text" class="form-control @error('firstname') is-invalid @enderror"
+                                                    value="{{ old('firstname') }}" id="username" name="firstname" autofocus
                                                         placeholder="Enter firstname">
                                                     @error('firstname')
                                                         <span class="invalid-feedback" role="alert">
@@ -125,10 +125,22 @@
 
                                                 <div class="mb-3">
                                                     <label for="lastname" class="form-label">Lastname</label>
-                                                    <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                                    value="{{ old('lastname') }}" id="lastname" name="lastname" autofocus required
+                                                    <input type="text" class="form-control @error('lastname') is-invalid @enderror"
+                                                    value="{{ old('lastname') }}" id="lastname" name="lastname" autofocus
                                                         placeholder="Enter lastname">
-                                                    @error('name')
+                                                    @error('lastname')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="user_name" class="form-label">UserName</label>
+                                                    <input type="text" class="form-control @error('user_name') is-invalid @enderror"
+                                                    value="{{ old('user_name') }}" id="username" name="user_name" autofocus
+                                                        placeholder="Enter user_name">
+                                                    @error('user_name')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>
@@ -137,10 +149,10 @@
 
                                                 <div class="mb-3">
                                                     <label for="phone" class="form-label">Phone</label>
-                                                    <input type="phone" class="form-control @error('name') is-invalid @enderror"
+                                                    <input type="phone" class="form-control @error('phonenumber') is-invalid @enderror"
                                                     value="{{ old('phonenumber') }}" id="phone" name="phonenumber" autofocus required
                                                         placeholder="Enter Phone number">
-                                                    @error('name')
+                                                    @error('phonenumber')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>
@@ -148,16 +160,16 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="gender" class="form-label">Gender</label>
-                                                    <select  class="form-control @error('name') is-invalid @enderror"
-                                                    value="{{ old('') }}" id="gender" name="gender" autofocus required
+                                                    <select  class="form-control @error('gender') is-invalid @enderror"
+                                                    value="{{ old('gender') }}" id="gender" name="gender" autofocus required
                                                         placeholder="Enter Phone number">
-                                                        
+
                                                       <option value="">Gender...</option>
                                                       <option value="female">Female</option>
                                                       <option value="male">Male</option>
                                                     </select>
 
-                                                    @error('name')
+                                                    @error('gender')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>
@@ -167,10 +179,10 @@
 
                                                 <div class="mb-3">
                                                     <label for="country" class="form-label">Country</label>
-                                                    <select  class="form-control @error('name') is-invalid @enderror"
+                                                    <select  class="form-control @error('country') is-invalid @enderror"
                                                     value="{{ old('country') }}" id="country" name="country" autofocus required
                                                         >
-                                                        
+
 <option value="">Country...</option>
 <option value="Afganistan">Afghanistan</option>
 <option value="Albania">Albania</option>
@@ -421,7 +433,7 @@
 <option value="Zimbabwe">Zimbabwe</option>
 </select>
 
-                                                    @error('name')
+                                                    @error('country')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>
@@ -430,7 +442,8 @@
 
                                                 <div class="mb-3">
                                                     <label for="city" class="form-label">City</label>
-                                                    <input type="text" class="form-control @error('city') is-invalid @enderror" id="userpassword" name="password"
+                                                    <input type="text" class="form-control @error('city') is-invalid @enderror"
+                                                    id="userpassword" name="city"
                                                         placeholder="Enter City" autofocus required>
                                                         @error('password')
                                                         <span class="invalid-feedback" role="alert">
@@ -440,7 +453,7 @@
                                                 </div>
 
 
-        
+
                                                 <div class="mb-3">
                                                     <label for="userpassword" class="form-label">Password</label>
                                                     <input type="password" class="form-control @error('password') is-invalid @enderror" id="userpassword" name="password"
@@ -451,7 +464,7 @@
                                                         </span>
                                                     @enderror
                                                 </div>
-        
+
                                                 <div class="mb-3">
                                                     <label for="confirmpassword" class="form-label">Confirm Password</label>
                                                     <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" id="confirmpassword"
@@ -463,26 +476,29 @@
                                                     @enderror
                                                 </div>
 
-        
+
                                                 <div class="mb-3">
                                                     <label for="age">Date of Birth</label>
                                                     <div class="input-group" id="datepicker1">
-                                                        <input type="text" class="form-control @error('dob') is-invalid @enderror" placeholder="dd-mm-yyyy"
-                                                            data-date-format="dd-mm-yyyy" data-date-container='#datepicker1' data-date-end-date="0d" value="{{ old('age') }}"
+                                                        <input type="text" class="form-control @error('dob') is-invalid @enderror"
+                                                        placeholder="dd-mm-yyyy"
+                                                            data-date-format="dd-mm-yyyy" data-date-container='#datepicker1'
+                                                            data-date-end-date="0d" value="{{ old('age') }}"
                                                             data-provide="datepicker" name="age" autofocus required>
                                                         <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
-                                                        @error('dob')
+                                                        @error('age')
                                                             <span class="invalid-feedback" role="alert">
                                                                 <strong>{{ $message }}</strong>
                                                             </span>
                                                         @enderror
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="mb-3">
                                                     <label for="avatar">Profile Picture</label>
                                                     <div class="input-group">
-                                                        <input type="file" class="form-control @error('avatar') is-invalid @enderror" id="inputGroupFile02" name="avatar" autofocus required>
+                                                        <input type="file" class="form-control @error('avatar') is-invalid @enderror"
+                                                         id="inputGroupFile02" name="avatar" autofocus required>
                                                         <label class="input-group-text" for="inputGroupFile02">Upload</label>
                                                     </div>
                                                     @error('avatar')
@@ -491,15 +507,15 @@
                                                         </span>
                                                     @enderror
                                                 </div>
-        
+
                                                 <div class="mt-4 d-grid">
                                                     <button class="btn btn-primary waves-effect waves-light"
                                                         type="submit">Register</button>
                                                 </div>
-        
+
                                                 <div class="mt-4 text-center">
                                                     <h5 class="font-size-14 mb-3">Sign up using</h5>
-        
+
                                                     <ul class="list-inline">
                                                         <li class="list-inline-item">
                                                             <a href="#"
@@ -521,8 +537,8 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-        
-                                              
+
+
 
                                             <div class="mt-3 text-center">
                                                 <p>Already have an account ? <a href="{{ url('login') }}"
