@@ -41,6 +41,7 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="remember" {{ old('remember') ? 'checked' : '' }}>
                   <label class="form-check-label" for="remember"> Remember me </label>
+
                 </div>
                 <div class="mt-3 d-grid">
                   <button class="btn btn-primary waves-effect waves-light" type="submit">Log In</button>
@@ -91,3 +92,6 @@
   <script src="{{ URL::asset('/assets/libs/owl.carousel/owl.carousel.min.js') }}"></script>
   <!-- auth-2-carousel init -->
   <script src="{{ URL::asset('/assets/js/pages/auth-2-carousel.init.js') }}"></script> @endsection
+
+
+ 
