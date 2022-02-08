@@ -14,18 +14,18 @@
 @endcomponent
 
 <div class="row justify-content-center">
-    <div class="col-xl-4">
+    <div class="col-xl-12">
         <div class="card overflow-hidden">
-            <div class="bg-primary bg-soft">
+            <div class="bg-danger bg-soft">
                 <div class="row">
                     <div class="col-7">
-                        <div class="text-primary p-3">
-                            <h5 class="text-primary">Welcome  !</h5>
+                        <div class="text-danger p-3">
+                            <h5 class="text-danger">Welcome  !</h5>
                             
                         </div>
                     </div>
                     <div class="col-5 align-self-end">
-                        <img src="{{ URL::asset('/assets/images/profile-img.png') }}" alt="" class="img-fluid">
+                        
                     </div>
                 </div>
             </div>
@@ -35,9 +35,6 @@
                         <div class="avatar-md profile-user-wid mb-4">
                             <img src="{{ isset(Auth::user()->avatar) ? asset(Auth::user()->avatar) : asset('/assets/images/users/avatar-1.jpg') }}" alt="" class="img-thumbnail rounded-circle">
                             <br>
-                           
-                            
-
                         </div>
                        
                     </div>
@@ -48,7 +45,7 @@
                             <h5>{{ Auth::user()->user_name }}</h5>
 
 
-                                <a href="" class="btn btn-primary waves-effect waves-light btn-sm" data-bs-toggle="modal" data-bs-target=".update-profile">Edit Profile</a>
+                                <a href="" class="btn btn-danger waves-effect waves-light btn-sm" data-bs-toggle="modal" data-bs-target=".update-profile">Edit Profile</a>
                             </div>
                        
                     </div>
@@ -123,11 +120,7 @@
                         <div class="text-danger" id="nameError" data-ajax-feedback="name"></div>
                   
 </div>
-                 <div class=" input-group mb-3">
-                     
-                     <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ Auth::user()->phone_number }}" id="phone_number" name="phone_number" autofocus placeholder="Enter phone_number">
-                     <div class="text-danger" id="nameError" data-ajax-feedback="name"></div>
-                 </div>
+               
                  
 
                     <div class="input-group mb-3">
@@ -136,6 +129,10 @@
                      <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ Auth::user()->last_name }}" id="last_name" name="last_name" autofocus placeholder="Enter last name">
 
                      </div>
+                      
+                     <input type="password" class="form-control @error('name') is-invalid @enderror" value="{{ Auth::user()->password }}" id="password" name="password" autofocus placeholder="Enter password">
+                     <br>
+                     <div class="text-danger" id="nameError" data-ajax-feedback="name"></div> 
                        <select class="form-control @error('name') is-invalid @enderror"  id="gender" name="gender" autofocus required placeholder="Enter Phone number">
                         <option value="{{ Auth::user()->phone_number }}">{{ Auth::user()->gender}}</option>
                         <option value="female">Female</option>
@@ -143,24 +140,18 @@
                       </select> 
                      
                  </div>
-                 <div class="input-group mb-3">
+                 <!-- <div class="input-group mb-3">
                      
                      <input type="password" class="form-control @error('name') is-invalid @enderror" value="{{ Auth::user()->password }}" id="password" name="password" autofocus placeholder="Enter password">
                      <div class="text-danger" id="nameError" data-ajax-feedback="name"></div>
-                 </div>
+                 </div> -->
+
+                  
 
                     <div class="input-group mb-3">
-                        
-                        <div class="input-group mb-3" id="datepicker1">
-                            <input type="text" class="form-control @error('dob') is-invalid @enderror" placeholder="dd-mm-yyyy" data-date-format="dd-mm-yyyy" data-date-container='#datepicker1' data-date-end-date="0d" value="{{ date('d-m-Y', strtotime(Auth::user()->age)) }}" data-provide="datepicker" name="age" autofocus id="dob">
-                            <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
-                        </div>
-                        <div class="text-danger" id="dobError" data-ajax-feedback="dob"></div>
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <label for="avatar">Profile Picture</label>
-                        <div class="input-group ">
+                       
+                        <div class="input-group mb-3 ">
+                            
                             <input type="file" class="form-control @error('avatar') is-invalid @enderror" id="avatar" name="avatar" autofocus>
                             <label class="input-group-text" for="avatar">Upload</label>
                         </div>
@@ -171,7 +162,7 @@
                     </div>
 
                     <div class="mt-3 d-grid">
-                        <button class="btn btn-primary waves-effect waves-light UpdateProfile" data-id="{{ Auth::user()->id }}" type="submit">Update</button>
+                        <button class="btn btn-danger waves-effect waves-light UpdateProfile" data-id="{{ Auth::user()->id }}" type="submit">Update</button>
                     </div>
                 </form>
                 

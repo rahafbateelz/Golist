@@ -2,42 +2,48 @@
 <!-- owl.carousel css -->
 <link rel="stylesheet" href="{{ URL::asset('/assets/libs/owl.carousel/owl.carousel.min.css') }}">
 <link href="{{ URL::asset('/assets/libs/bootstrap-datepicker/bootstrap-datepicker.min.css') }}" rel="stylesheet" type="text/css"> @endsection @section('body') <body class="auth-body-bg">
-  <nav class="navbar navbar-light bg-light">
+  <body style="background-color: #fafafa !important">
+<nav class="navbar navbar-light bg-light">
+
     <div class="container-fluid">
       <a href="index" class="d-block auth-logo">
         <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt="" height="18" class="auth-logo-dark">
         <img src="{{ URL::asset('/assets/images/logo-light.png') }}" alt="" height="18" class="auth-logo-light">
       </a>
     </div>
-  </nav> @endsection @section('content') <div class="container ">
+  </nav> 
+  @endsection @section('content') 
+  <br>
+  <br>
+  <div class="container" >
     <div class="d-flex col-l-6 justify-content-center">
-      <div class="auth-full-page-content p-md-5 p-4">
-        <div class="w-100 ">
+      <div class="auth-full-page-content p-md-5 p-4" style="background-color: #ffffff !important; border:solid 1px #dbdbdb; border-radius:8px;">
+        <div class="w-100 "   >
           <div class="d-flex flex-column h-100 ">
-            <div class="mb-4 mb-md-5">
+            <div class="mb-4 mb-md-3">
               <a href="index" class="d-block auth-logo">
                 <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt="" height="18" class="auth-logo-dark">
                 <img src="{{ URL::asset('/assets/images/logo-light.png') }}" alt="" height="18" class="auth-logo-light">
               </a>
             </div>
-            <div class="my-auto  ">
+            <div class="my-auto">
               <div>
-                <h5 class="text-primary text-center">Register account</h5>
+                <h5 class="text-danger text-center">Register account</h5>
               </div>
-              <div class="mt-3 ">
+              <div class=" input-group mt-3">
                 <form method="POST" class="form-horizontal" action="{{ route('register') }}" enctype="multipart/form-data"> @csrf <div class=" input-group mb-3">
-                    <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('first_name') }}" id="firstname" name="first_name" autofocus required placeholder="Enter firstname"> &nbsp; &nbsp; 
-                    <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('last_name') }}" id="lastname" name="last_name" autofocus required placeholder="Enter lastname"> @error('firstname') <span class="invalid-feedback" role="alert">
+                    <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('first_name') }}" id="firstname" name="first_name" autofocus required placeholder="Firstname"> &nbsp; &nbsp; 
+                    <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('last_name') }}" id="lastname" name="last_name" autofocus required placeholder="Lastname"> @error('firstname') <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
                     </span> @enderror
                   </div>
                   <div class="input-group mb-3">
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" value="{{ old('email') }}" name="email" placeholder="Enter email" autofocus required> &nbsp; &nbsp; 
-                    <input type="phone" class="form-control @error('name') is-invalid @enderror" value="{{ old('phone_number') }}" id="phone" name="phone_number" autofocus required placeholder="Enter Phone number"> @error('email') <span class="invalid-feedback" role="alert">
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" value="{{ old('email') }}" name="email" placeholder="Email" autofocus required> &nbsp; &nbsp; 
+                    <input type="password" class="form-control @error('password') is-invalid @enderror" value="{{ old('password') }}" id="password" name="password" autofocus required placeholder="Password"> @error('email') <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
                     </span> @enderror
                   </div>
-                  <div class="input-group mb-3">
+                  <!-- <div class="input-group mb-3">
                     <select class="form-control @error('name') is-invalid @enderror" value="{{ old('country') }}" id="country" name="country" autofocus required>
                       <option value="">Country...</option>
                       <option value="Afganistan">Afghanistan</option>
@@ -318,9 +324,9 @@
                      <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" id="confirmpassword" name="password_confirmation" placeholder="Enter Confirm password" autofocus required> @error('password') <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
                     </span> @enderror
-                  </div>
+                  </div> -->
                   <div class="mt-4 d-grid">
-                    <button class="btn btn-primary waves-effect waves-light" type="submit">Register</button>
+                    <button class="btn btn-danger waves-effect waves-light" type="submit">Register</button>
                   </div>
                   <div class="mt-4 text-center">
                     <h5 class="font-size-14 mb-3">Sign up using</h5>
@@ -343,7 +349,7 @@
                     </ul>
                   </div>
                   <div class="mt-3 text-center">
-                    <p>Already have an account ? <a href="{{ url('login') }}" class="fw-medium text-primary"> Login</a>
+                    <p>Already have an account ? <a href="{{ url('login') }}" class="fw-medium text-danger"> Login</a>
                     </p>
                   </div>
               </div>
@@ -356,7 +362,10 @@
   </div>
   <!-- end row -->
   </div>
-  <nav class="navbar navbar-light">
+
+  <br>
+  <br>
+  <nav class="navbar navbar-light bg-light">
     <div class="container text-center">
       <p>&copy; 2022 Monolist</p>
     </div>
