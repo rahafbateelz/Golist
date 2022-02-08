@@ -43,7 +43,7 @@
                                                                     package. You can find the files in the 'dist'
                                                                     folder...no need to install git and all the other
                                                                     stuff the documentation talks about. "</p>
-                                                                    
+
                                                                 <div>
                                                                     <h4 class="font-size-16 text-primary">Abs1981</h4>
                                                                     <p class="font-size-14 mb-0">- Skote User</p>
@@ -153,7 +153,7 @@
                                                         </a>
                                                     </li>
                                                     <li class="list-inline-item">
-                                                        <a href="#" class="social-list-item bg-danger text-white border-danger">
+                                                        <a href="{{ url('social/auth/google') }}" class="social-list-item bg-danger text-white border-danger">
                                                             <i class="mdi mdi-google"></i>
                                                         </a>
                                                     </li>
@@ -166,7 +166,7 @@
                                     </div>
                                 </div>
 
-                             
+
                             </div>
 
 

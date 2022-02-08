@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthSoclite\LoginSocliteController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,8 @@ Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //Language Translation
 Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
+
+Route::prefix('social')->group(function(){
+    Route::get('auth/{driver}', [LoginSocliteController::class,'redirectToGoogle']);
+    Route::get('auth/callback/{driver}', [LoginSocliteController::class,'handleGoogleCallback']);
+});
