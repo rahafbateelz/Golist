@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-7">
                         <div class="text-danger p-3">
-                            <h5 class="text-danger">Welcome  !</h5>
+                            <h5 class="text-danger">Welcome {{ Auth::user()->user_name }}  !</h5>
                             
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                             <h5>{{ Auth::user()->user_name }}</h5>
 
 
-                                <a href="" class="btn btn-danger waves-effect waves-light btn-sm" data-bs-toggle="modal" data-bs-target=".update-profile">Edit Profile</a>
+                                <!-- <a href="" class="btn btn-danger waves-effect waves-light btn-sm" data-bs-toggle="modal" data-bs-target=".update-profile">Edit Profile</a> -->
                             </div>
                        
                     </div>
@@ -63,31 +63,42 @@
                         <tbody>
                             <tr>
                                 <th scope="row">UserName :</th>
-                                <td>{{ Auth::user()->user_name }}</td>
+                                <td>                     <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ Auth::user()->user_name }}" id="first_name" name="user_name" autofocus placeholder="Enter user name">
+</td>
                             </tr>
                             <tr>
                                 <th scope="row">FirstName :</th>
-                                <td>{{ Auth::user()->first_name }}</td>
+                                <td>                     <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ Auth::user()->first_name }}" id="first_name" name="first_name" autofocus placeholder="Enter first name">
+</td>
                             </tr>
                             <tr>
                                 <th scope="row">LastName :</th>
-                                <td>{{ Auth::user()->last_name }}</td>
+                                <td>                     <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ Auth::user()->user_name }}" id="first_name" name="first_name" autofocus placeholder="Enter last name">
+</td>
                             </tr>
                             <tr>
                                 <th scope="row">Gender :</th>
-                                <td>{{ Auth::user()->gender }}</td>
+                                <td><select class="form-control @error('name') is-invalid @enderror"  id="gender" name="gender" autofocus required placeholder="Enter Phone number">
+                        <option value="{{ Auth::user()->phone_number }}">{{ Auth::user()->gender}}</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                      </select> </td>
                             </tr>
                             <tr>
                                 <th scope="row">Birthdate :</th>
-                                <td>{{ date('d-m-Y', strtotime(Auth::user()->age)) }}</td>
+                                <td><input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ Auth::user()->age }}" id="age" name="age" autofocus placeholder="Enter age"></td>
+                                
+
                             </tr>
                             <tr>
                                 <th scope="row">E-mail :</th>
-                                <td>{{ Auth::user()->email }}</td>
+                                <td>                     <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ Auth::user()->email }}" id="email" name="email" autofocus placeholder="Enter email">
+</td>
                             </tr>
                             <tr>
                                 <th scope="row">Phone Number :</th>
-                                <td>{{ Auth::user()->phone_number }}</td>
+                                <td>                     <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ Auth::user()->phone_number }}" id="phone_number" name="phone_number" autofocus placeholder="Enter phone number">
+</td>
                             </tr>
                         </tbody>
                     </table>

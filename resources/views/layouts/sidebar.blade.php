@@ -1,12 +1,11 @@
 <!-- ========== Left Sidebar Start ========== -->
-<div class="vertical-menu">
+<!-- <div class="vertical-menu">
 
     <div data-simplebar class="h-100">
 
-        <!--- Sidemenu -->
-        <div id="sidebar-menu">
+        <div id="sidebar-menu"> -->
             <!-- Left Menu Start -->
-            <ul class="metismenu list-unstyled" id="side-menu">
+            <!-- <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title" key="t-menu">@lang('translation.Menu')</li>
 
                 <li>
@@ -146,8 +145,8 @@
                             <a href="javascript: void(0);">
                                 <span class="badge rounded-pill badge-soft-success float-end"
                                     key="t-new">@lang('translation.New')</span>
-                                <span key="t-email-templates">@lang('translation.Templates')</span>
-                            </a>
+                                <span key="t-email-templates">@lang('translation.Templates')</span> -->
+                            <!-- </a>
                             <ul class="sub-menu" aria-expanded="true">
                                 <li><a href="email-template-basic"
                                         key="t-basic-action">@lang('translation.Basic_Action')</a></li>
@@ -410,6 +409,49 @@
                 </li>
 
             </ul>
+        </div>
+        
+    </div>
+</div> -->
+<!-- Left Sidebar End -->
+
+<!-- ========== Left Sidebar Start ========== -->
+<div class="vertical-menu" style="background:white;">
+
+    <div data-simplebar class="h-100">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu" id="side-menu">
+            <li class="menu-title" key="t-apps">@lang('translation.Apps')</li>
+
+<li>
+    <a href="javascript: void(0);" class="waves-effect">
+        <i class="bx bx-home"></i><span class="badge rounded-pill bg-success float-end"></span>
+        <span key="t-dashboards">Home</span>
+    </a>
+   
+</li>
+
+            <li class="menu-title" key="t-pages">@lang('translation.Pages')</li>
+
+               
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-task"></i>
+                        <span key="t-tasks">List</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="tasks-list" key="t-task-list">@lang('translation.Task_List')</a></li>
+                        <li><a href="tasks-kanban" key="t-kanban-board">@lang('translation.Kanban_Board')</a></li>
+                        <li><a href="tasks-create" key="t-create-task">@lang('translation.Create_Task')</a></li>
+                    </ul>
+                </li>
+
+             
+
         </div>
         <!-- Sidebar -->
     </div>

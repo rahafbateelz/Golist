@@ -13,7 +13,7 @@
 </head>
 
 @section('body')
-    <body data-sidebar="dark">
+    <body >
 @show
     <!-- Begin page -->
     <div id="layout-wrapper">
